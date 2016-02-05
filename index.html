@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<!--lang="zh-Hans" 代表 Chinese (Simplified)-->
+<!--关于 html lang 标签的资料在这里找到: http://www.w3schools.com/tags/ref_language_codes.asp-->
+<head>
+<!-- 
+	开发人员书写规范:
+	1.所有缩进都用 TAB 长度4， 而不是空格。
+	2.非必要，禁止用行内样式例如 <div style="display:block"> 
+ -->
+<meta charset="utf-8">
+<script src="js/lib/browser.js"></script><!--浏览器判断-->
+<title>TITLE</title>
+<meta name="description" content="">
+<meta name="author" content="J.Chen">
+<!-- 让360双核浏览器用webkit内核渲染页面 !!! 注意，这行最好放在前面，防止浏览器开始解析的时候采用其它内置的渲染方案  -->
+<meta name="renderer" content="webkit">
+<!-- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--高版本安卓Chrome卡片式切换的时候的皮肤（卡片）颜色-->
+<meta name="theme-color" content="#9f0800">
+
+<!--以下link 用来指明 移动端 跳转， 如果你是响应式页面的话，就不需要这种东西-->
+<!--<link rel="alternate" media="handheld" href="https://m.xxx.com/">-->
+<!--<link rel="alternate" media="only screen and (max-width: 640px)" href="https://hd.xxx.com/">-->
+<!--<link rel="canonical" href="http://www.example.com/page-1" >-->
+
+<!-- IOS6全屏 Chrome高版本全屏 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes"> 
+<!-- Mobile Specific Metas -->
+<!-- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI，但是在 iOS8.1 被取消 -->
+<!--Safari 将会对有内容溢出 Viewport 区域的页面进行缩放适配，使溢出的内容完整展示而不出现滚动条，而在 Viewport 设置中引入了一个新属性 shrink-to-fit = no，该属性可以禁止这种缩放行为的发生。-->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
+<!-- 指定苹果设备添加到主屏的标题 -->
+<meta name="apple-mobile-web-app-title" content="title2">
+<!-- CSS -->
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<!-- Favicons -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- Android 主屏图标(注意，安卓的图标要放在苹果前面，不然安卓会认苹果的默认57px的链接) -->
+<link rel="icon" href="icons/Android/192/touch-icon.png"  sizes="192x192">
+<link rel="icon" href="icons/Android/128/touch-icon.png" sizes="128x128">
+<!-- iOS 主屏图标 -->
+<link rel="apple-touch-icon" href="icons/iOS/Icon-60.png"><!--iPhone default-->
+<link rel="apple-touch-icon" href="icons/iOS/Icon-60@2x.png" sizes="120x120"><!-- iPhone6,5,4-->
+<link rel="apple-touch-icon" href="icons/iOS/Icon-60@3x.png" sizes="180x180"><!-- iPhone6 plus-->
+<link rel="apple-touch-icon" href="icons/iOS/Icon-72.png" sizes="72x72"><!-- iPad non-retina icon (iOS < 7)-->
+<link rel="apple-touch-icon" href="icons/iOS/Icon-72@2x.png" sizes="144x144"><!-- iPad retina icon (iOS < 7) -->  
+<link rel="apple-touch-icon" href="icons/iOS/Icon-76.png" sizes="76x76"><!-- iPad non-retina icon -->
+<link rel="apple-touch-icon" href="icons/iOS/Icon-76@2x.png" sizes="152x152"><!-- iPad and mini-->
+<link rel="apple-touch-icon" href="icons/iOS/icon-83.5@2x.png" sizes="167x167"><!-- iPad Pro -->
+
+<!-- iOS 启动图标 iPhones -->
+<link rel="apple-touch-startup-image" href="images/320x480/ios_startup.png"> 
+<link rel="apple-touch-startup-image" href="images/640x960/ios_startup.png" sizes="640x960">
+<link rel="apple-touch-startup-image" href="images/960x640/ios_startup.png" sizes="960x640">
+<link rel="apple-touch-startup-image" href="images/640x1136/ios_startup.png" sizes="640x1136">
+<link rel="apple-touch-startup-image" href="images/1136x640/ios_startup.png" sizes="1136x640">
+<link rel="apple-touch-startup-image" href="images/750x1334/ios_startup.png" sizes="750x1334">
+<link rel="apple-touch-startup-image" href="images/1334x750/ios_startup.png" sizes="1334x750">
+<link rel="apple-touch-startup-image" href="images/1242x2208/ios_startup.png" sizes="1242x2208">
+<link rel="apple-touch-startup-image" href="images/2208x1242/ios_startup.png" sizes="2208x1242">
+<!-- iOS 启动图标 iPads -->
+<!--iPad non-retina-->
+<link rel="apple-touch-startup-image" href="images/768x1024/ios_startup.png" sizes="768x1024"> 
+<link rel="apple-touch-startup-image" href="images/1024x768/ios_startup.png" sizes="1024x768"> 
+<!--iPad retina-->
+<link rel="apple-touch-startup-image" href="images/1536x2048/ios_startup.png" sizes="1536x2048"> 
+<link rel="apple-touch-startup-image" href="images/2048x1536/ios_startup.png" sizes="2048x1536"> 
+<!--iPad Pro-->
+<link rel="apple-touch-startup-image" href="images/2732x2048/ios_startup.png" sizes="2732x2048"> 
+<link rel="apple-touch-startup-image" href="images/2048x2732/ios_startup.png" sizes="2048x2732"> 
+
+<!--调试阶段禁止缓存,例如微信，QQ浏览器缓存-->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<!-- Enable iOS 自动检测电话号码 -->  
+<meta name="format-detection" content="telephone=yes"> 
+
+<!-- 禁止百度转码 -->  
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<!-- 针对手持设备优化  -->
+<!-- uc强制竖屏 -->
+<meta name="screen-orientation" content="portrait"><!--or landscape-->
+<!-- QQ强制竖屏 -->
+<meta name="x5-orientation" content="portrait"> <!--or landscape-->
+<!-- UC强制全屏 -->
+<meta name="full-screen" content="yes">
+<!-- QQ强制全屏 -->
+<meta name="x5-fullscreen" content="true">
+<!-- UC应用模式 -->
+<!--使用了application这种应用模式后，页面讲默认全屏，禁止长按菜单，禁止手势，标准排版，以及强制图片显示-->
+<meta name="browsermode" content="application">
+<!-- QQ应用模式 -->
+<meta name="x5-page-mode" content="app">
+<!-- windows phone 点击无高光 -->
+<meta name="msapplication-tap-highlight" content="no">
+
+<!-- Javascript with AMD  -->
+<script src="js/lib/require.js" data-main="js/app/main" ></script>
+
+</head>
+<body>
+	<!-- Everything started here -->
+	<div class="container"></div>
+</body>
+
+</html>
