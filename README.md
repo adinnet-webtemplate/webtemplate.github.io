@@ -29,7 +29,7 @@
 #基于国内浏览器特殊meta
 ```html
 <!-- 让360双核浏览器用webkit内核渲染页面 !!! 注意，有可能它是重载页面之后才生效  -->
-<meta name="renderer" content="webkit>
+<meta name="renderer" content="webkit”>
 <!-- IE渲染方式 -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 ```
