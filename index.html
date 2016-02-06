@@ -75,16 +75,17 @@
 <link rel="apple-touch-startup-image" href="images/2048x2732/ios_startup.png" sizes="2048x2732"> 
 
 <!--调试阶段禁止缓存,例如微信，QQ浏览器缓存-->
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, no-siteapp">
+<!--
+参数说明:
+no-cache, no-store, must-revalidate 这几个是禁用缓存
+no-siteapp 是用于禁止百度自动转码 
+-->
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 
 <!-- Enable iOS 自动检测电话号码 -->  
 <meta name="format-detection" content="telephone=yes"> 
-
-<!-- 禁止百度转码 -->  
-<meta http-equiv="Cache-Control" content="no-siteapp">
-
 
 <!-- 针对手持设备优化  -->
 <!-- uc强制竖屏 -->
