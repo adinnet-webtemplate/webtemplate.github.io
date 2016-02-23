@@ -182,6 +182,13 @@ if (typeof jQBrowser != 'undefined') {
 	if (jQBrowser.chrome) {
 		document.documentElement.classList.add('chrome');
 	}
+	if ('devicePixelRatio' in  window) {
+		var pr = 'pixel-ratio-' + window.devicePixelRatio;
+		document.documentElement.classList.add(pr);
+		if (window.devicePixelRatio > 3) {
+			document.documentElement.classList.add('pixel-ratio-sp');
+		}
+	}
 }
 //window.debugBrowser = null;
 //if (window.debugBrowser) {
