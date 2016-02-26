@@ -68,8 +68,9 @@
 
 ###### 引用的资源：
 * __art_work 目录下引用的图标PSD模板是来自 http://appicontemplate.com/ 
-* reset引用了 normalize.css , 来自 http://necolas.github.io/normalize.css/
-* browser.js 忘记从哪里抄过来的，反正很久以前的事了，从 stackoverflow 搜来的，声明不是原创就对了 知道的同学说下出处
+* reset 引用了 normalize.css , 来自 http://necolas.github.io/normalize.css/
+* ua-parser.js 用于检测浏览器版本, 修改自 : https://github.com/faisalman/ua-parser-js/ 
+* [弃用] browser.js 忘记从哪里抄过来的，反正很久以前的事了，从 stackoverflow 搜来的，声明不是原创就对了 知道的同学说下出处
 
 # Links
 目前就职公司：http://www.adinnet.cn 
