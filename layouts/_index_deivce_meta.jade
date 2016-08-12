@@ -1,0 +1,17 @@
+//- 让360双核浏览器用webkit内核渲染页面 !!! 注意，这行最好放在前面，防止浏览器开始解析的时候采用其它内置的渲染方案
+meta(name='renderer', content='webkit')
+//- 让IE浏览器用最高级内核渲染页面 还有用 Chrome 框架的页面用webkit 内核
+meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+//- 高版本安卓Chrome卡片式切换的时候的皮肤（卡片）颜色
+meta(name='theme-color', content='#9f0800')
+//- 以下link 用来指明 移动端 跳转， 如果你是响应式页面的话，就不需要这种东西
+//- <link rel="alternate" media="handheld" href="https://m.xxx.com/">
+//- <link rel="alternate" media="only screen and (max-width: 640px)" href="https://hd.xxx.com/">
+//- <link rel="canonical" href="http://www.example.com/page-1" >
+//- IOS6全屏 Chrome高版本全屏
+meta(name='apple-mobile-web-app-capable', content='yes')
+meta(name='mobile-web-app-capable', content='no')
+//- Mobile Specific Metas
+//- !!!注意 minimal-ui 是IOS7.1的新属性，最小化浏览器UI，但是在 iOS8.1 被取消
+//- Safari 将会对有内容溢出 Viewport 区域的页面进行缩放适配，使溢出的内容完整展示而不出现滚动条，而在 Viewport 设置中引入了一个新属性 shrink-to-fit = no，该属性可以禁止这种缩放行为的发生。
+meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no')

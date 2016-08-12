@@ -1,0 +1,32 @@
+mixin iosicon(relName, iconURL,iconName, iconType, iconSize, iconRatio)
+  //- var iconRatio_var = "."
+  if iconRatio > 1
+    - var iconRatio_var = "@" + iconRatio + "x."
+    - var iconSize_var = iconSize * iconRatio
+  else 
+    - var iconRatio_var = "."
+    - var iconSize_var = iconSize
+  link(
+   rel = relName,
+   href = iconURL + iconName + iconSize + iconRatio_var + iconType,
+   sizes = iconSize_var + "x" + iconSize_var
+  )
+//- android icons  
+//- Android 主屏图标(注意，安卓的图标要放在苹果前面，不然安卓会认苹果的默认57px的链接)
++iosicon("icon", "icons/Android/", "touch-icon", "png", 192, 1)  
++iosicon("icon", "icons/Android/", "touch-icon", "png", 128, 1)  
+//- iPhone default
++iosicon("apple-touch-icon", "icons/iOS/", "icon-", "png", 60, 1)
+//- iPhone6,5,4
++iosicon("apple-touch-icon", "icons/iOS/", "icon-", "png", 60, 2)
+//- iPhone6 plus
++iosicon("apple-touch-icon", "icons/iOS/", "icon-", "png", 60, 3)
+//- iPad non-retina icon (iOS < 7)
++iosicon("apple-touch-icon", "icons/iOS/", "icon-", "png", 72, 1)
+//- iPad retina icon (iOS < 7)
++iosicon("apple-touch-icon", "icons/iOS/", "icon-", "png", 72, 2)
+//- iPad and mini
++iosicon("apple-touch-icon", "icons/iOS/", "icon-", "png", 76, 1)
++iosicon("apple-touch-icon", "icons/iOS/", "icon-", "png", 76, 2)
+//- iPad Pro
++iosicon("apple-touch-icon", "icons/iOS/", "icon-", "png", 83.5, 2)

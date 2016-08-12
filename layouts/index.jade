@@ -1,0 +1,44 @@
+doctype html
+html(lang='zh-Hans')
+  //- 
+    lang="zh-Hans" 代表 Chinese (Simplified)
+    关于 html lang 标签的资料在这里找到: http://www.w3schools.com/tags/ref_language_codes.asp
+  head
+    //-
+      开发人员书写规范:
+      1.所有缩进都用空格。
+      2.非必要，禁止用行内样式例如 <div style="display:block">
+    meta(charset='utf-8')
+    script(src='js/lib/ua-parser.min.js')
+    //- 浏览器判断
+    - var htmltitle = "my site", htmltitle2 = htmltitle + " 2"
+    title #{htmltitle}
+    //- 指定苹果设备添加到主屏的标题
+    meta(name='apple-mobile-web-app-title', content='#{htmltitle2}')
+    //- 用于搜索引擎说明文字
+    meta(name='description', content='')
+    //- 作者名字
+    meta(name='author', content='J.Chen')
+    include _index_deivce_meta.jade
+    //- CSS
+    link(href='css/reset.css', rel='stylesheet', type='text/css')
+    link(href='css/style.css', rel='stylesheet', type='text/css')
+    //- Favicons
+    //- see this https://mathiasbynens.be/notes/rel-shortcut-icon
+    //- link(rel='icon', href='favicon.ico')
+    //- 主屏图标
+    include _index_iOS_icon.jade
+    //- iOS 启动图标 
+    include _index_iOS_startup.jade
+    //- 调试
+    include _index_debug_control.jade
+    block pagescript
+     //- Javascript with AMD
+     script(src='js/lib/require.js', data-main='js/app/main')
+    //-
+      如果想知道如何创建 IE11+ 基于 win8.1 或者更高版本 的 磁铁风格，
+      请移步 https://msdn.microsoft.com/library/dn455106.aspx
+  body
+    //- Everything started here
+    .container
+     block con

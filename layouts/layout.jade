@@ -1,0 +1,11 @@
+//output:../layout.html,pretty:true
+extends index.jade
+block prepend con
+  - var pageName = "layout"
+  - var styles = { "display" : "none" }
+  div(id="#{pageName}", style = styles )
+block con
+  div test
+  div hello world
+    span#test Lorem ipsum dolor sit amet
+      a(herf="#") SHOW MORE

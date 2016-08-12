@@ -1,0 +1,34 @@
+- var noCache = true, appMode = true, fullScreen = false
+if noCache
+ meta(http-equiv='Cache-Control', content='no-cache, no-store, must-revalidate, no-siteapp')
+ //-
+  参数说明:
+  no-cache, no-store, must-revalidate 这几个是禁用缓存
+  no-siteapp 是用于禁止百度自动转码
+ meta(http-equiv='Pragma', content='no-cache')
+ meta(http-equiv='Expires', content='0')
+
+//- UC应用模式
+//- 使用了application这种应用模式后，页面讲默认全屏，禁止长按菜单，禁止手势，标准排版，以及强制图片显示
+if appMode 
+ meta(name='browsermode', content='application')
+//- QQ应用模式
+if appMode 
+ meta(name='x5-page-mode', content='app')
+//- Enable iOS 自动检测电话号码
+meta(name='format-detection', content='telephone=no') 
+//- windows phone 点击无高光
+meta(name='msapplication-tap-highlight', content='no')
+//- 针对手持设备优化
+//- uc强制竖屏
+meta(name='screen-orientation', content='portrait')
+//- or landscape
+//- QQ强制竖屏
+meta(name='x5-orientation', content='portrait')
+//- or landscape
+//- UC强制全屏
+if fullScreen
+ meta(name='full-screen', content='yes')
+//- QQ强制全屏
+if fullScreen
+ meta(name='x5-fullscreen', content='true')

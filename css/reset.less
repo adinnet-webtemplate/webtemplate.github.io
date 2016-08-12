@@ -140,6 +140,13 @@ and (min-width : 1824px) {
 // Styles 
 }
 
+@media all and (display-mode: standalone) {
+	// 据说是检测 app webview 模式 或者 从 home screen 打开的 webapp 模式
+	// 截止目前为止没有浏览器支持
+	// 但是具体文章在这（翻墙）：https://developers.google.com/web/updates/2015/10/display-mode
+}
+
+
 
 // 视网膜显示屏CSS  我建议无视这条css， 因为市面上的设备分辨率只会越来越高，我建议从长远考虑，直接用SVG 或者纯CSS绘制图像，毕竟截止2015年底，我想找一台非视网膜测试机也是很难的一件事。
 @media only screen and (-webkit-min-device-pixel-ratio: 2),

@@ -1,0 +1,35 @@
+mixin iosStatup(relName, statupURL, statupName, statupType)
+ //- landscape
+ //- portrait
+ - var statupSize = { "ip3":[320,480], "ip4":[640,960], "ip5":[640,1136], "ip6":[750,1334], "ip6p":[1242,2208], "ipad":[768,1024], "ipadr":[1536,2048], "ipadp":[2732,2048] }
+ each k, index in statupSize 
+  link(
+   rel = relName,
+   href = statupURL + statupName + "-" + index + "-portrait." + statupType,
+   sizes = k[0] + "x" + k[1]
+  )
+  link(
+   rel = relName,
+   href = statupURL + statupName + "-" + index + "-landscape." + statupType,
+   sizes = k[1] + "x" + k[0]
+  )
+//- link(rel='apple-touch-startup-image', href='images/320x480/ios_startup.png')
+//- link(rel='apple-touch-startup-image', href='images/640x960/ios_startup.png', sizes='640x960')
+//- link(rel='apple-touch-startup-image', href='images/960x640/ios_startup.png', sizes='960x640')
+//- link(rel='apple-touch-startup-image', href='images/640x1136/ios_startup.png', sizes='640x1136')
+//- link(rel='apple-touch-startup-image', href='images/1136x640/ios_startup.png', sizes='1136x640')
+//- link(rel='apple-touch-startup-image', href='images/750x1334/ios_startup.png', sizes='750x1334')
+//- link(rel='apple-touch-startup-image', href='images/1334x750/ios_startup.png', sizes='1334x750')
+//- link(rel='apple-touch-startup-image', href='images/1242x2208/ios_startup.png', sizes='1242x2208')
+//- link(rel='apple-touch-startup-image', href='images/2208x1242/ios_startup.png', sizes='2208x1242')
+//- iOS 启动图标 iPads
+//- iPad non-retina
+//- link(rel='apple-touch-startup-image', href='images/768x1024/ios_startup.png', sizes='768x1024')
+//- link(rel='apple-touch-startup-image', href='images/1024x768/ios_startup.png', sizes='1024x768')
+//- iPad retina
+//- link(rel='apple-touch-startup-image', href='images/1536x2048/ios_startup.png', sizes='1536x2048')
+//- link(rel='apple-touch-startup-image', href='images/2048x1536/ios_startup.png', sizes='2048x1536')
+//- iPad Pro
+//- link(rel='apple-touch-startup-image', href='images/2732x2048/ios_startup.png', sizes='2732x2048')
+//- link(rel='apple-touch-startup-image', href='images/2048x2732/ios_startup.png', sizes='2048x2732')
++iosStatup( "apple-touch-startup-image", "startupImage/", "ios_startup", "png" )
